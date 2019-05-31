@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
+import styles from './Characters.css';
 
 function Characters({ characters }) {
-  const chars = characters.map(({ id, name, url }) => (
-    <li key={id}>
-      <Character name={name} url={url} />
+  const chars = characters.map(character => (
+    <li key={character.id}>
+      <Character character={character} />
     </li>
   ));
 
   return (
-    <ul>
+    <ul className={styles.Characters}>
       {chars}
     </ul>
   );

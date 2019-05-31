@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-function Character({ id, name, url }) {
+function Character({ character }) {
   return (
-    <Link to={`/${id}`}>
-      <img src={url} />
-      <h3>{name}</h3>
-    </Link>
+    <section>
+      <img src={character.url} />
+      <h3>{character.name}</h3>
+    </section>
   );
 }
 
 Character.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired
+  character: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default Character;
