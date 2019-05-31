@@ -1,1 +1,1 @@
-App created using JavaScript React, Redux, and asynchronous Thunk middleware
+App created using JavaScript React, Redux, and asynchronous Promise-Middleware-Redux middleware
