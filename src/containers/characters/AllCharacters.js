@@ -5,9 +5,9 @@ import {
   getCharacters,
   getCharactersLoading,
   getCharactersError
-} from '../selectors/charactersSelectors';
-import Characters from '../components/character/Characters';
-import { fetchCharacters } from '../actions/characterActions';
+} from '../../selectors/charactersSelectors';
+import Characters from '../../components/character/Characters';
+import { fetchCharacters } from '../../actions/characterActions';
 
 class AllCharacters extends PureComponent {
   static propTypes = {
@@ -23,7 +23,8 @@ class AllCharacters extends PureComponent {
 
   render() {
     const { characters, loading, error } = this.props;
-    if(loading) return <h2>Loading...</h2>;
+    if(loading) return <h1>Loading...</h1>;
+    if(error) return <h1>Unable to load characters</h1>;
     return <Characters characters={characters} />;
   }
 }

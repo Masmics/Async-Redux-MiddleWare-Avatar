@@ -24,6 +24,7 @@ export const getCharacter = id => {
     .then(json => ({
       id: json._id,
       name: json.name,
-      url: json.photoUrl
+      url: json.photoUrl,
+      position: json.position
     }));
 };

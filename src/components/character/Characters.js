@@ -5,7 +5,7 @@ import styles from './Characters.css';
 
 function Characters({ characters }) {
   const chars = characters.map(character => (
-    <li key={character.id}>
+    <li key={character.id} className={styles.Character}>
       <Character character={character} />
     </li>
   ));
