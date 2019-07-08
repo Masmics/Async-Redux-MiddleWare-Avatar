@@ -6,7 +6,7 @@ import styles from './Characters.css';
 function Character({ character }) {
   return (
     <section>
-      <Link to={`redux-avatar-promise/${character.id}`}>
+      <Link to={`/${character.id}`}>
         <img src={character.url} style={styles.img} />
         <h3>{character.name}</h3>
       </Link>
